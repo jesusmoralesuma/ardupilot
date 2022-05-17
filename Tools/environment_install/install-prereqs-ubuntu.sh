@@ -65,7 +65,7 @@ PIP=pip3
 if [ ${RELEASE_CODENAME} == 'xenial' ]; then
     SITLFML_VERSION="2.3v5"
     SITLCFML_VERSION="2.3"
-    PYTHON_V="python2"
+    PYTHON_V="python"
     PIP=pip2
 elif [ ${RELEASE_CODENAME} == 'disco' ]; then
     SITLFML_VERSION="2.5"
