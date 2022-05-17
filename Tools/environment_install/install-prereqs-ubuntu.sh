@@ -139,7 +139,7 @@ fi
 BASE_PKGS="build-essential ccache g++ gawk git make wget"
 if [ ${RELEASE_CODENAME} == 'xenial' ] || [ ${RELEASE_CODENAME} == 'disco' ] || [ ${RELEASE_CODENAME} == 'eoan' ]; then
     # use fixed version for package that drop python2 support
-    PYTHON_PKGS="future lxml pymavlink MAVProxy pexpect flake8==3.7.9 geocoder empy configparser==5.0.0 click==7.1.2 decorator==4.4.2"
+    PYTHON_PKGS="future lxml pymavlink MAVProxy pexpect flake8==3.7.9 geocoder empy configparser==4.0.2 click==7.1.2 decorator==4.4.2"
 else
     PYTHON_PKGS="future lxml pymavlink MAVProxy pexpect flake8 geocoder empy"
 fi
@@ -177,7 +177,7 @@ function install_arm_none_eabi_toolchain() {
                     heading "Installing toolchain for STM32 Boards"
                     echo "Installing toolchain for STM32 Boards"
                     echo "Downloading from ArduPilot server"
-                    sudo wget https://firmware.ardupilot.org/Tools/STM32-tools/gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
+                    sudo wget https://firmware.ardupilot.org/Tools/STM32-tools/gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2 --no-check-certificate
                     echo "Installing..."
                     sudo chmod -R 777 gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
                     sudo tar xjf gcc-arm-none-eabi-10-2020-q4-major-x86_64-linux.tar.bz2
@@ -197,7 +197,7 @@ function install_arm_none_eabi_toolchain() {
                     heading "Installing toolchain for STM32 Boards"
                     echo "Installing toolchain for STM32 Boards"
                     echo "Downloading from ArduPilot server"
-                    sudo wget https://firmware.ardupilot.org/Tools/STM32-tools/gcc-arm-none-eabi-10-2020-q4-major-aarch64-linux.tar.bz2
+                    sudo wget https://firmware.ardupilot.org/Tools/STM32-tools/gcc-arm-none-eabi-10-2020-q4-major-aarch64-linux.tar.bz2 --no-check-certificate
                     echo "Installing..."
                     sudo chmod -R 777 gcc-arm-none-eabi-10-2020-q4-major-aarch64-linux.tar.bz2
                     sudo tar xjf gcc-arm-none-eabi-10-2020-q4-major-aarch64-linux.tar.bz2
